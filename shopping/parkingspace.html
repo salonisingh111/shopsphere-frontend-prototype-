@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Area  s</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional external CSS file -->
+    <style>
+
+        /* NavBar */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dad2ff;
+        }
+
+        header {
+            background-color: #493d9e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/Geofence\ \(3\).jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 5rem;
+        z-index: 999;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      /* Loading Line Animation */
+      .loading-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background: linear-gradient(90deg, #ff5733, #ffc300, #ff5733);
+        background-size: 200% 100%;
+        animation: loadingAnimation 1.5s linear infinite;
+        z-index: 1000;
+      }
+
+      @keyframes loadingAnimation {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+        .shop-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+            padding: 0 10px;
+        }
+
+        .shop {
+            background-color: #ffffff;
+            border: 1px solid #c8e6c9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden; /* Ensure text doesn't overflow */
+        }
+
+        .shop:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .shop img {
+            max-width: 180px;
+            max-height: 120px;
+            border-radius: 5px;
+            margin-right: 20px;
+            object-fit: cover; /* Ensure image fits well */
+        }
+
+        .shop h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333333;
+        }
+
+        .shop h3 span.Parking Area   {
+            color: #B9B28A;
+            font-weight: bold;
+        }
+
+        .shop p {
+            color: #555555;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-top: 5px;
+        }
+
+        .timing {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .shop-container {
+                width: 100%;
+                padding: 0;
+            }
+
+            .shop {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .shop img {
+                margin-bottom: 15px;
+            }
+
+            .shop h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+
+    <header>
+        <h1>Parking Areas</h1>
+    </header>
+    <div class="shop-container">
+        <!-- Shop 1 -->
+        <a href="sarojnimaket.html" class="shop">
+            <img src="/Images/shop1.jpeg" alt="Shop 1">
+            <div>
+                <h3>Sarojni <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>Popular shopping destination known for its affordable fashion, trendy accessories, and vibrant street culture. It offers a wide variety of clothing.</p>
+                <p class="timing">Open daily: 10:00 AM - 9:00 PM</p>
+            </div>
+        </a>   
+        <!-- Shop 2 -->
+        <a href="crowfordParking Area  .html" class="shop">
+            <img src="/Images/shop2.jpeg" alt="Shop 2">
+            <div>
+                <h3>Crowford <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>Vibrant and historic shopping destination known for its colonial architecture, offering fresh produce, exotic fruits, imported foods, and household items.</p>
+                <p class="timing">Open daily: 9:00 AM - 8:00 PM</p>
+            </div>
+        </a>
+        <!-- Shop 3 -->
+        <a href="jantaParking Area  .html" class="shop">
+            <img src="/Images/shop3.jpeg" alt="Shop 3">
+            <div>
+                <h3>Janta <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>A bustling, community-oriented Parking Area  place offering a variety of goods, from fresh produce to household items, catering to local needs with affordable prices.</p>
+                <p class="timing">Open daily: 8:00 AM - 7:00 PM</p>
+            </div>
+        </a>
+        <!-- Shop 4 -->
+        <a href="miniParking Area  .html" class="shop">
+            <img src="/Images/shop4.png" alt="Shop 4">
+            <div>
+                <h3>Mini <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>A small, park your car  store offering everyday essentials like snacks, beverages, and household items for quick and easy shopping.</p>
+                <p class="timing">Open daily: 7:00 AM - 10:00 PM</p>
+            </div>
+        </a>
+        <!-- Shop 5 -->
+        <a href="panchvati.html" class="shop">
+            <img src="/Images/shoop5.jpeg" alt="Shop 5">
+            <div>
+                <h3>Panchvati <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>A vibrant local Parking Area   offering fresh produce, spices, and daily necessities, serving the community with a traditional shopping experience.</p>
+                <p class="timing">Open daily: 9:00 AM - 8:00 PM</p>
+            </div>
+        </a>
+        <!-- Shop 6 -->
+        <a href="earthwisecollective.html" class="shop">
+            <img src="/Images/shop6.webp" alt="Shop 6">
+            <div>
+                <h3>EarthWise <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>An eco-friendly Parking Area  place offering organic, sustainable products, including fresh produce, eco-conscious goods, and health-focused items.</p>
+                <p class="timing">Open daily: 10:00 AM - 6:00 PM</p>
+            </div>
+        </a>
+        <!-- Shop 7 -->
+        <a href="renewrootsParking Area  .html" class="shop">
+            <img src="/Images/shop7.avif" alt="Shop 7">
+            <div>
+                <h3>Renew Roots <span class="Parking Area  ">Parking Area  </span></h3>
+                <p>Renew Robots Parking Area   is a hub for innovative, sustainable robots catering to various industries and personal use.</p>
+                <p class="timing">Open daily: 9:00 AM - 5:00 PM</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

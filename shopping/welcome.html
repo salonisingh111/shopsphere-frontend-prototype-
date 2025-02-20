@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shafarik&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>ShopSphere</title>
+    <style>
+      /* Basic CSS for layout */
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative; /* Position relative for absolute positioning of video */
+        overflow: hidden; /* Hide scrollbars */
+        transition: background-color 0.3s ease; /* Add a smooth transition for background color changes */
+      }
+
+      nav {
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 10px;
+        margin: 10px;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-left: 20px;
+      }
+
+      nav a {
+        padding: 60px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+        font-family: "ubuntu", serif;
+      }
+
+      .main-container {
+        display: flex;
+        padding: 20px;
+      }
+
+      .left-section {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      .right-section {
+        flex: 1;
+      }
+
+      .right-section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+      }
+      .floating {
+        animation-name: smoothFloating;
+        animation-duration: 6s; /* Adjust for desired speed */
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out; /* Smooth transition */
+      }
+
+      @keyframes smoothFloating {
+        0% {
+          transform: translate(0, 0);
+        }
+        20% {
+          transform: translate(15px, -10px); /* Move right and up */
+        }
+        40% {
+          transform: translate(-10px, 15px); /* Move left and down */
+        }
+        60% {
+          transform: translate(-15px, -10px); /* Move left and up */
+        }
+        80% {
+          transform: translate(10px, 10px); /* Move right and down */
+        }
+        100% {
+          transform: translate(0, 0); /* Return to original position */
+        }
+      }
+      .toggle {
+        display: none; /* Hide toggle button by default */
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      /* Media query for mobile view */
+      @media (max-width: 768px) {
+        .main-container {
+          flex-direction: column;
+        }
+
+        nav ul {
+          display: none; /* Hide navigation links by default */
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          text-align: center;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+
+        nav ul.active {
+          display: flex; /* Show navigation links when active */
+        }
+
+        .toggle {
+          display: block; /* Show toggle button on mobile */
+        }
+      }
+
+      /* Styles for buttons */
+      .button-container {
+        margin-top: 20px;
+      }
+
+      .button-container a {
+        display: inline-block;
+        padding: 12px 24px;
+        margin-right: 10px;
+        background-color: #1b58ad;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: background-color 0.1s ease; /* Slightly faster transition */
+      }
+
+      .button-container a:hover {
+        background-color: #ffffff;
+        color: #1b58ad;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Video Background -->
+    <video class="video-background" autoplay loop muted>
+      <source
+        src="/images/Untitled video - Made with Clipchamp.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <nav>
+      <div class="logo" style="color: white">ShopSphere</div>
+      <ul>
+        <li><a href="geogence.html">Geofence</a></li>
+        <li><a href="cart.html">Add to Cart</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+      <div class="toggle">
+        <span class="material-symbols-outlined"> menu </span>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div
+        class="left-section"
+        style="display: flex; flex-direction: column; justify-content: center"
+      >
+        <h1 style="font-size: 54px; font-weight: bold;">ShopSphere</h1>
+        <p style="font-size: 18px">
+          Welcome to ShopSphere, your one-stop destination for seamless shopping
+          and convenient parking solutions. Explore a wide range of products and
+          enjoy hassle-free parking at our partner locations.
+        </p>
+        <!-- Buttons -->
+        <div class="button-container">
+          <a href="retailspace.html" class="transition-button">Explore Now</a>
+          <a href="cart.html" class="transition-button">Cart</a>
+        </div>
+      </div>
+      <div class="right-section">
+        <img
+          src="/images/welcome-removebg-preview.png"
+          alt="Placeholder Image"
+          class="floating"
+        />
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".toggle").addEventListener("click", function () {
+        document.querySelector("nav ul").classList.toggle("active");
+      });
+
+      // JavaScript to handle button click color change and transition
+      const buttons = document.querySelectorAll(".transition-button");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent immediate navigation
+
+          const href = this.getAttribute("href"); // Get the destination URL
+          const originalColor = this.style.backgroundColor; // Store original color
+          const body = document.querySelector("body");
+          // Change the button color to black
+          this.style.backgroundColor = "black";
+          this.style.color = "white";
+
+          body.style.backgroundColor = "black";
+
+          // Delay navigation to allow color change to be visible
+          setTimeout(() => {
+            window.location.href = href; // Navigate to the destination URL
+          }, 300); // Adjust the delay (in milliseconds) as needed
+        });
+      });
+    </script>
+  </body>
+</html>

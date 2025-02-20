@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shops in Sarojni Market</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #493D9E;
+        color: white;
+        z-index: 999;
+      }
+      .navbar .logo img {
+        width: 50px;
+      }
+
+      .search-bar {
+        flex: 1;
+        margin-left: 20px;
+      }
+
+      .search-bar input {
+        width: 90%;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+      }
+        /* Navbar */
+        .navbar-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px;
+      }
+
+      .navbar-links a:hover {
+        text-decoration: underline;
+      }
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .content h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Shop Card Styles */
+        .shop-card {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .shop-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .shop-card img {
+            width: 280px;
+            height: 180px;
+            object-fit: cover; /* Ensure the image fits without stretching */
+            flex-shrink: 0;
+        }
+
+        .shop-details {
+            padding: 15px 20px;
+            flex: 1;
+        }
+
+        .shop-details h2 {
+            font-size: 1.8rem;
+            color: #493D9E;
+            margin-bottom: 10px;
+        }
+
+        .shop-details p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .shop-details .shop-timing {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: #777;
+        }
+
+        .shop-details .shop-timing span {
+            font-weight: bold;
+            color: #493D9E;
+        }
+
+        .shop-products,
+        .shop-offers {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f7f9f7;
+            border-radius: 8px;
+        }
+
+        .shop-products ul,
+        .shop-offers ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .shop-products ul li,
+        .shop-offers ul li {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .shop-products span,
+        .shop-offers span {
+            font-weight: bold;
+            color: #493D9E;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .shop-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .shop-card img {
+                width: 100%;
+                height: 200px; /* Adjust image height for mobile */
+                object-fit: cover; /* Keeps image proportionate */
+            }
+
+            .shop-details {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+          <span>ShopSphere</span>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search for products..." />
+        </div>
+        <div class="navbar-links">
+          <a href="geogence.html">Geo Tags</a>
+          <a href="cart.html">Add to Cart</a>
+          <a href="#about-us">About Us</a>
+        </div>
+      </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Shops in Sarojni Market</h1>
+        <p>Explore our eco-friendly shops and discover sustainable products, unique offers, and much more.</p>
+
+        <!-- Shop 1 -->
+        <div class="shop-card">
+            <img src="/photo/store1.jpeg" alt="Shop 1">
+            <div class="shop-details">
+                <h2>Green Paradise</h2>
+                <p>Green Paradise offers organic fruits, eco-friendly home goods, and reusable products for sustainable living.</p>
+                <p class="shop-timing"><span>Open:</span> 9:00 AM - 7:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Fruits & Vegetables</li>
+                        <li>Eco-friendly Cleaning Products</li>
+                        <li>Reusable Bags</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>Buy 2 Organic Items, Get 1 Free</li>
+                        <li>10% Off on Reusable Products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop 2 -->
+        <div class="shop-card">
+            <img src="/photo/store4.jpeg" alt="Shop 2">
+            <div class="shop-details">
+                <h2>Digital mart</h2>
+                <p>EcoMart offers sustainable food, eco-friendly gadgets, and home essentials for conscious living.</p>
+                <p class="shop-timing"><span>Open:</span> 10:00 AM - 8:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Foods</li>
+                        <li>Eco Gadgets</li>
+                        <li>Recycled Paper Products</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>15% Off on Organic Snacks</li>
+                        <li>Buy 1 Eco Gadget, Get 1 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="/photo/store4.jpeg" alt="Shop 2">
+            <div class="shop-details">
+                <h2>Reliance</h2>
+                <p>EcoMart offers sustainable food, eco-friendly gadgets, and home essentials for conscious living.</p>
+                <p class="shop-timing"><span>Open:</span> 10:00 AM - 8:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Foods</li>
+                        <li>Eco Gadgets</li>
+                        <li>Recycled Paper Products</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>15% Off on Organic Snacks</li>
+                        <li>Buy 1 Eco Gadget, Get 1 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="/photo/store5.jpg" alt="Shop 2">
+            <div class="shop-details">
+                <h2>Chroma</h2>
+                <p>EcoMart offers sustainable food, eco-friendly gadgets, and home essentials for conscious living.</p>
+                <p class="shop-timing"><span>Open:</span> 10:00 AM - 8:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Foods</li>
+                        <li>Eco Gadgets</li>
+                        <li>Recycled Paper Products</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>15% Off on Organic Snacks</li>
+                        <li>Buy 1 Eco Gadget, Get 1 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="/photo/store6.jpeg" alt="Shop 2">
+            <div class="shop-details">
+                <h2>Dmart</h2>
+                <p>EcoMart offers sustainable food, eco-friendly gadgets, and home essentials for conscious living.</p>
+                <p class="shop-timing"><span>Open:</span> 10:00 AM - 8:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Foods</li>
+                        <li>Eco Gadgets</li>
+                        <li>Recycled Paper Products</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>15% Off on Organic Snacks</li>
+                        <li>Buy 1 Eco Gadget, Get 1 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shop-card">
+            <img src="/photo/store5.jpg" alt="Shop 2">
+            <div class="shop-details">
+                <h2>Shopping mart</h2
+                <p>EcoMart offers sustainable food, eco-friendly gadgets, and home essentials for conscious living.</p>
+                <p class="shop-timing"><span>Open:</span> 10:00 AM - 8:00 PM</p>
+                <div class="shop-products">
+                    <span>Available Products:</span>
+                    <ul>
+                        <li>Organic Foods</li>
+                        <li>Eco Gadgets</li>
+                        <li>Recycled Paper Products</li>
+                    </ul>
+                </div>
+                <div class="shop-offers">
+                    <span>Current Offers:</span>
+                    <ul>
+                        <li>15% Off on Organic Snacks</li>
+                        <li>Buy 1 Eco Gadget, Get 1 50% Off</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - ShopSphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eae6ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            background-color: #4a3d99;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .wallet-container {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .wallet-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f8ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .wallet-item span {
+            color: #4a3d99;
+        }
+        .payment-methods {
+            background: #4a3d99;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        .payment-methods div {
+            background: white;
+            color: #4a3d99;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .payment-methods div:hover {
+            background: #ddd5ff;
+        }
+        .history-btn {
+            margin-top: 20px;
+            background: #4a3d99;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.2rem;
+            width: 100%;
+            max-width: 200px;
+            transition: 0.3s;
+        }
+        .history-btn:hover {
+            background: #362c80;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">ShopSphere Wallet</div>
+    <div class="wallet-container">
+        <div class="wallet-item">Current Balance <span>$1500</span></div>
+        <div class="wallet-item">Month Expense <span>$2000</span></div>
+        <div class="wallet-item">Withdrawal Amount <span>$100</span></div>
+        <div class="wallet-item">Coupon Amount <span>$100</span></div>
+        <div class="wallet-item">Savings <span>$260</span></div>
+    </div>
+    <div class="wallet-container payment-methods">
+        <div>ShopsPay</div>
+        <div>PhonePay</div>
+        <div>GPay</div>
+        <div>PayPal</div>
+    </div>
+    <div class="history-btn">History</div>
+</body>
+</html>

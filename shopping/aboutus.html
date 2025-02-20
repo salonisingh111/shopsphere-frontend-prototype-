@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saloni Singh - Frontend Developer</title>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(120deg, #0a192f, #112240);
+        color: #ccd6f6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        animation: backgroundAnimation 5s infinite alternate ease-in-out;
+        position: relative;
+      }
+      .header {
+        font-size: 50px;
+        font-weight: bold;
+        background: linear-gradient(90deg, #64ffda, #a8b2d1, #64ffda);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeIn 1.5s ease-in-out, textGlow 1.5s infinite alternate;
+      }
+      .sub-header {
+        font-size: 22px;
+        margin-top: 10px;
+        color: #8892b0;
+        animation: slideUp 1.5s ease-in-out;
+      }
+      .small-text {
+        font-size: 18px;
+        color: rgba(100, 255, 218, 0.8);
+        margin-top: 10px;
+        opacity: 1;
+        font-weight: bold;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes slideUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes textGlow {
+        0% { text-shadow: 0 0 10px rgba(100, 255, 218, 0.6); }
+        100% { text-shadow: 0 0 20px rgba(100, 255, 218, 1); }
+      }
+      @keyframes backgroundAnimation {
+        0% { background: linear-gradient(120deg, #0a192f, #112240); }
+        100% { background: linear-gradient(120deg, #112240, #0a192f); }
+      }
+      .glow-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 60px 90px;
+        border-radius: 15px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      }
+      .glow-box:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(100, 255, 218, 0.8);
+      }
+      .glow-effect {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(circle, rgba(255, 105, 180, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+        border-radius: 50%;
+        filter: blur(80px);
+        animation: moveGlow 6s infinite alternate ease-in-out;
+      }
+      .glow-effect:nth-child(1) {
+        top: 10%;
+        left: 15%;
+        animation-duration: 7s;
+      }
+      .glow-effect:nth-child(2) {
+        bottom: 10%;
+        right: 20%;
+        animation-duration: 5s;
+      }
+      .glow-effect:nth-child(3) {
+        top: 50%;
+        left: 50%;
+        animation-duration: 6s;
+      }
+      @keyframes moveGlow {
+        0% { transform: translateY(-30px) translateX(-30px); }
+        100% { transform: translateY(30px) translateX(30px); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow-effect"></div>
+    <div class="glow-effect"></div>
+    <div class="glow-effect"></div>
+    <div class="glow-box">
+      <div class="header">Saloni Singh</div>
+      <div class="sub-header">FYCS | Frontend Developer</div>
+      <div class="small-text">Abhishekh Prajapati | SYCS | Fullstack Developer</div>
+    </div>
+  </body>
+</html>

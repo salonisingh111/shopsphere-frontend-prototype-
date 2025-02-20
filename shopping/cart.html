@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Existing styles remain the same */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dad2ff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #493d9e;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .cart-items {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .cart-item {
+            display: flex;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+        }
+        .item-details {
+            flex: 1;
+        }
+        .out-of-stock {
+            color: red;
+        }
+        .price-details {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            margin-left: 20px;
+            border-radius: 5px;
+        }
+        .coupon-section, .wallet-section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .coupon {
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .place-order {
+            background-color: orange;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        /* Styles for the loading animation */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/Geofence\ \(3\).jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            color: aliceblue;
+            font-weight: bold;
+            z-index: 1000; /* Ensure it's on top of everything */
+            animation: fadeOut 0.5s forwards 1s; /* Fade out after 3 seconds */
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-line" id="loading-line"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+      <span>SHOPSPHERE...</span>
+    </div>
+
+    <div class="header">ShopSphere</div>
+    <div class="wallet-section">
+        <h3>Wallet Balance</h3>
+        <p>Available Balance: <b>₹1,500</b></p>
+    </div>
+    <div class="container">
+        <div class="cart-items">
+            <h3>From Saved Addresses</h3>
+            <div class="cart-item">
+                <img src="/images/earbuds.webp" alt="Earbuds">
+                <div class="item-details">
+                    <p><b>TRIGGR Apex S2 2025, Dual Pairing, 60H Battery</b></p>
+                    <p class="out-of-stock">Enter pincode to see if the product is in stock</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="/images/makeup.webp" alt="Makeup Kit">
+                <div class="item-details">
+                    <p><b>M L Markline Ultra Clear Makeup Kit</b></p>
+                    <p class="out-of-stock">Out Of Stock</p>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="/images/makeup2.webp" alt="Makeup Kit">
+                <div class="item-details">
+                    <p><b>F-Zone Makeup Kit for Women</b></p>
+                    <p class="out-of-stock">Out Of Stock</p>
+                </div>
+            </div>
+        </div>
+        <div class="price-details">
+            <h3>PRICE DETAILS</h3>
+            <p>Price (9 items): <b>₹89,474</b></p>
+            <p>Discount: <span style="color: green;">-₹27,442</span></p>
+            <p>Coupons for you: <span style="color: green;">-₹62</span></p>
+            <p>Protect Promise Fee: ₹58</p>
+            <p>Delivery Charges: <s>₹255</s> <b>₹65</b></p>
+            <h2>Total Amount: ₹62,093</h2>
+            <p style="color: green;">You will save ₹27,381 on this order</p>
+            <div class="place-order">PLACE ORDER</div>
+        </div>
+    </div>
+    <div class="coupon-section">
+        <h3>Available Coupons</h3>
+        <div class="coupon">10% off on orders above ₹5000</div>
+        <div class="coupon">Flat ₹200 off on first purchase</div>
+        <div class="coupon">Buy 2 get 1 free on selected items</div>
+        <div class="coupon">₹100 cashback on wallet payments</div>
+    </div>
+
+</body>
+</html>
